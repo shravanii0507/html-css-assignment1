@@ -1,0 +1,145 @@
+<html>
+
+<head>
+
+<title>Shravani Webpage</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+}
+
+header{
+background-color:lightblue;
+padding:15px;
+}
+
+nav{
+background-color:black;
+padding:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-right:15px;
+}
+
+aside{
+width:20%;
+background-color:#eeeeee;
+float:left;
+height:500px;
+padding:10px;
+}
+
+section{
+width:75%;
+float:right;
+padding:10px;
+}
+
+article{
+width:30%;
+border:1px solid black;
+float:left;
+margin:5px;
+padding:5px;
+text-align:center;
+}
+
+article img{
+width:100%;
+height:120px;
+}
+
+footer{
+background-color:black;
+color:white;
+text-align:center;
+padding:10px;
+clear:both;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Shravani Dumbre</h2>
+
+<p>Instagram | Facebook | Twitter</p>
+
+</header>
+
+<nav>
+
+<a href="">Home</a>
+<a href="">About</a>
+<a href="">Services</a>
+<a href="">Contact</a>
+
+</nav>
+
+<aside>
+
+<h3>My Details</h3>
+
+<p>Name : Shravani</p>
+
+<p>Course : BSc CS</p>
+
+<p>Interested in Coding</p>
+
+</aside>
+
+<section>
+
+<h2>My Profile</h2>
+
+<article>
+
+<h3>My Photo</h3>
+
+<img src="PIC.jpg">
+
+<p>This is my profile photo.</p>
+
+</article>
+
+<article>
+
+<h3>Resume</h3>
+
+<img src="resume.png">
+
+<p>My education and skills details.</p>
+
+</article>
+
+<article>
+
+<h3>Coding Interests</h3>
+
+<img src="coding.jpg">
+
+<p>I am learning HTML and CSS.</p>
+
+</article>
+
+</section>
+
+<footer>
+
+Simple Internship Assignment
+
+</footer>
+
+</body>
+
+</html>
