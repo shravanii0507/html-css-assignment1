@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Div</title>
+
+    <style>
+
+        .box{
+            background-color: lightgray;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+
+        function createDiv(width, height, text){
+
+            let newDiv = document.createElement("div");
+
+            newDiv.style.width = width + "px";
+
+            newDiv.style.height = height + "px";
+
+            newDiv.innerText = text;
+
+            newDiv.className = "box";
+
+            document.getElementById("container").appendChild(newDiv);
+
+        }
+
+        createDiv(200, 100, "Hello");
+
+    </script>
+
+</body>
+</html>
