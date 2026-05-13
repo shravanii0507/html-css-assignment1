@@ -1,0 +1,217 @@
+// Q1) Remove states starting with vowels using filter
+
+let states = ["Maharashtra", "Uttar Pradesh", "Andhra Pradesh", "Odisha", "Karnataka", "Assam"];
+
+let result = states.filter(function(state) {
+    let firstLetter = state[0].toLowerCase();
+
+    return firstLetter != "a" &&
+           firstLetter != "e" &&
+           firstLetter != "i" &&
+           firstLetter != "o" &&
+           firstLetter != "u";
+});
+
+console.log(result);
+
+
+
+// Q2) Reverse the sentence
+
+let str = "I love my India";
+
+let output = str.split(" ").reverse().join(" ");
+
+console.log(output);
+
+
+
+// Q3) INDIA to INDONESIA using splice
+
+let string = "INDIA";
+
+let arr = string.split("");
+
+arr.splice(3, 2, "O", "N", "E", "S", "I", "A");
+
+console.log(arr.join(""));
+
+
+
+// Q4) Count vowels and consonants
+
+let text = "JavaScript is very easy to learn";
+
+let vowels = 0;
+let consonants = 0;
+
+for(let i = 0; i < text.length; i++) {
+
+    let ch = text[i].toLowerCase();
+
+    if(ch >= 'a' && ch <= 'z') {
+
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            vowels++;
+        }
+        else {
+            consonants++;
+        }
+    }
+}
+
+console.log("Vowels =", vowels);
+console.log("Consonants =", consonants);
+
+
+
+// Q5) Replace wrong word with correct word
+
+function correctfn(string, wrong, correct) {
+
+    return string.replace(wrong, correct);
+}
+
+let sentence = "I luv JavaScript";
+
+console.log(correctfn(sentence, "luv", "love"));
+
+
+
+// Q6) Numbers greater than 5 using filter
+
+let inputArr = [1,2,3,9,10,7,5,4,3];
+
+let answer = inputArr.filter(function(num) {
+
+    return num > 5;
+});
+
+console.log(answer);
+
+
+
+// Q7) Find average using map and reduce
+
+const students = [
+    { name: "Ram", scores: [80, 70, 60] },
+    { name: "Mohan", scores: [80, 70, 90] },
+    { name: "Sai", scores: [60, 70, 80] },
+    { name: "Hemang", scores: [90, 90, 80, 80] },
+];
+
+let averages = students.map(function(student) {
+
+    let total = student.scores.reduce(function(sum, marks) {
+        return sum + marks;
+    }, 0);
+
+    let avg = total / student.scores.length;
+
+    return {
+        name: student.name,
+        average: avg
+    };
+});
+
+console.log(averages);
+
+
+
+// Q8) Repeated sum of digits
+
+function repeatedSum(num) {
+
+    while(num > 9) {
+
+        let sum = 0;
+
+        let str = num.toString();
+
+        for(let i = 0; i < str.length; i++) {
+
+            sum = sum + Number(str[i]);
+        }
+
+        num = sum;
+    }
+
+    return num;
+}
+
+console.log(repeatedSum(456));
+
+
+
+// Q9) Count words in paragraph
+
+function countWords(paragraph) {
+
+    let words = paragraph.split(" ");
+
+    return words.length;
+}
+
+let para = "JavaScript is easy and fun to learn";
+
+console.log(countWords(para));
+
+
+
+// Q10) Reverse a string
+
+function reverseString(str) {
+
+    return str.split("").reverse().join("");
+}
+
+console.log(reverseString("Hello"));
+
+
+
+// Q11) Find average marks of students
+
+let studentsData = {
+    student1: {
+        subject1: 44,
+        subject2: 56,
+        subject3: 87,
+        subject4: 97,
+        subject5: 37
+    },
+
+    student2: {
+        subject1: 44,
+        subject2: 56,
+        subject3: 87,
+        subject4: 97,
+        subject5: 37
+    },
+
+    student3: {
+        subject1: 44,
+        subject2: 56,
+        subject3: 87,
+        subject4: 97,
+        subject5: 37
+    }
+};
+
+let finalResult = {};
+
+for(let key in studentsData) {
+
+    let subjects = Object.values(studentsData[key]);
+
+    let total = subjects.reduce(function(sum, marks) {
+        return sum + marks;
+    }, 0);
+
+    let average = total / subjects.length;
+
+    finalResult[key] = {
+        average: average
+    };
+}
+
+console.log(finalResult);
