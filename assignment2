@@ -1,0 +1,105 @@
+//1. Even numbers from 1 to 100
+
+for(let i=1; i<=100; i++){
+
+    if(i%2==0){
+        console.log(i)
+    }
+
+}
+
+
+//2. Calculator using switch
+
+function calculate(a,b,ch){
+
+    switch(ch){
+
+        case 1:
+            console.log("Addition = "+(a+b))
+            break
+
+        case 2:
+            console.log("Subtraction = "+(a-b))
+            break
+
+        case 3:
+            console.log("Multiplication = "+(a*b))
+            break
+
+        case 4:
+            console.log("Division = "+(a/b))
+            break
+
+        default:
+            console.log("Invalid Choice")
+
+    }
+
+}
+
+calculate(10,5,1)
+calculate(10,5,2)
+calculate(10,5,3)
+calculate(10,5,4)
+
+
+//3. Tax calculation
+
+function findTax(salary){
+
+    let tax=0
+
+    switch(true){
+
+        case (salary>0 && salary<=500000):
+            tax=0
+            break
+
+        case (salary>500000 && salary<=1000000):
+            tax=salary*0.1
+            break
+
+        case (salary>1000000 && salary<=1500000):
+            tax=salary*0.2
+            break
+
+        case (salary>1500000):
+            tax=salary*0.3
+            break
+
+        default:
+            console.log("Invalid Salary")
+
+    }
+
+    console.log("Tax =",tax)
+
+}
+
+findTax(1200000)
+
+
+//4. Sum of product of digits
+
+function sumProduct(n1,n2){
+
+    let sum=0
+
+    while(n1>0 && n2>0){
+
+        let d1=n1%10
+        let d2=n2%10
+
+        sum=sum+(d1*d2)
+
+        n1=parseInt(n1/10)
+        n2=parseInt(n2/10)
+
+    }
+
+    console.log("Sum =",sum)
+
+}
+
+sumProduct(6,34)
