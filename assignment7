@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IPL 2022 Points Table</title>
+
+    <style>
+
+        body{
+            background-color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2{
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        table{
+            margin: auto;
+            border-collapse: collapse;
+            width: 85%;
+            background-color: #ffd54f;
+            color: black;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        }
+
+        th{
+            background-color: #f4b400;
+            color: black;
+            padding: 14px;
+            font-size: 17px;
+        }
+
+        td{
+            padding: 12px;
+            border-bottom: 1px solid #fbc02d;
+        }
+
+        tr:nth-child(even){
+            background-color: #ffe082;
+        }
+
+        tr:hover{
+            background-color: #ffca28;
+            transition: 0.3s;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>IPL 2022 Points Table</h2>
+
+    <table id="iplTable">
+
+        <tr>
+            <th>No</th>
+            <th>Team</th>
+            <th>Matches</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>Tied</th>
+            <th>NRR</th>
+            <th>Points</th>
+        </tr>
+
+    </table>
+
+    <script>
+
+        fetch("https://my-json-server.typicode.com/FreSauce/json-ipl/data")
+
+        .then(function(response) {
+            return response.json();
+        })
+
+        .then(function(data) {
+
+            data.sort(function(a, b) {
+                return a.NRR - b.NRR;
+            });
+
+            let table = document.getElementById("iplTable");
+
+            for(let i = 0; i < data.length; i++) {
+
+                let row = table.insertRow();
+
+                row.insertCell(0).innerHTML = data[i].No;
+                row.insertCell(1).innerHTML = data[i].Team;
+                row.insertCell(2).innerHTML = data[i].Matches;
+                row.insertCell(3).innerHTML = data[i].Won;
+                row.insertCell(4).innerHTML = data[i].Lost;
+                row.insertCell(5).innerHTML = data[i].Tied;
+                row.insertCell(6).innerHTML = data[i].NRR;
+                row.insertCell(7).innerHTML = data[i].Points;
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
