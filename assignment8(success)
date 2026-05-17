@@ -1,0 +1,75 @@
+<!-- success.html -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Booking Success</title>
+
+    <style>
+
+        body{
+            background:#dbeafe;
+            font-family:Arial;
+        }
+
+        .success-box{
+            width:400px;
+            background:white;
+            margin:auto;
+            margin-top:100px;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        h1{
+            color:green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="success-box">
+
+        <h1>Seat Booked Successfully</h1>
+
+        <h3 id="bookingId"></h3>
+
+        <p id="name"></p>
+
+        <p id="email"></p>
+
+        <p id="mobile"></p>
+
+    </div>
+
+    <script>
+
+        let params = new URLSearchParams(window.location.search);
+
+        let name = params.get("name");
+        let email = params.get("email");
+        let mobile = params.get("mobile");
+
+        let randomId = Math.floor(Math.random()*100000);
+
+        document.getElementById("bookingId").innerHTML =
+        "Booking ID : " + randomId;
+
+        document.getElementById("name").innerHTML =
+        "Name : " + name;
+
+        document.getElementById("email").innerHTML =
+        "Email : " + email;
+
+        document.getElementById("mobile").innerHTML =
+        "Mobile : " + mobile;
+
+    </script>
+
+</body>
+</html>
