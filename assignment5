@@ -1,0 +1,90 @@
+import React, { useState } from "react";
+
+function App() {
+
+  const [a, seta] = useState("");
+  const [b, setb] = useState("");
+  const [ans, setans] = useState("");
+
+  function add() {
+    setans(Number(a) + Number(b));
+  }
+
+  function sub() {
+    setans(Number(a) - Number(b));
+  }
+
+  function mul() {
+    setans(Number(a) * Number(b));
+  }
+
+  function div() {
+    if (Number(b) === 0) {
+      setans("Cannot divide by 0");
+    } else {
+      setans(Number(a) / Number(b));
+    }
+  }
+
+  return (
+    <div style={{
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#f4f4f4"
+    }}>
+
+      <div style={{
+        background: "white",
+        padding: "40px",
+        borderRadius: "15px",
+        boxShadow: "0 0 15px rgba(0,0,0,0.2)",
+        textAlign: "center",
+        width: "300px"
+      }}>
+
+        <h1>Calculator</h1>
+
+        <input
+          type="number"
+          placeholder="First Number"
+          value={a}
+          onChange={(e) => seta(e.target.value)}
+          style={{
+            width: "90%",
+            padding: "10px",
+            marginBottom: "10px"
+          }}
+        />
+
+        <br />
+
+        <input
+          type="number"
+          placeholder="Second Number"
+          value={b}
+          onChange={(e) => setb(e.target.value)}
+          style={{
+            width: "90%",
+            padding: "10px",
+            marginBottom: "20px"
+          }}
+        />
+
+        <br />
+
+        <button onClick={add}>Add</button>
+        <button onClick={sub}>Sub</button>
+        <button onClick={mul}>Mul</button>
+        <button onClick={div}>Div</button>
+
+        <h2>Answer = {ans}</h2>
+
+      </div>
+
+    </div>
+  );
+}
+
+export default App;
