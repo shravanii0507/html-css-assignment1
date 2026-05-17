@@ -1,0 +1,94 @@
+<!-- details.html -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Movie Details</title>
+
+    <style>
+
+        body{
+            background:#dbeafe;
+            font-family:Arial;
+            text-align:center;
+            padding:30px;
+        }
+
+        .box{
+            background:white;
+            width:400px;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        button{
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .seat{
+            width:40px;
+            height:40px;
+            background:#93c5fd;
+            margin:5px;
+            display:inline-block;
+            line-height:40px;
+            border-radius:5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1 id="movieName"></h1>
+
+        <p>Date : 25 May 2026</p>
+        <p>Time : 7:30 PM</p>
+        <p>Theater : PVR Cinemas</p>
+
+        <h3>Select Seats</h3>
+
+        <div>
+            <div class="seat">A1</div>
+            <div class="seat">A2</div>
+            <div class="seat">A3</div>
+            <div class="seat">A4</div>
+        </div>
+
+        <div>
+            <div class="seat">B1</div>
+            <div class="seat">B2</div>
+            <div class="seat">B3</div>
+            <div class="seat">B4</div>
+        </div>
+
+        <br><br>
+
+        <a href="booking.html">
+            <button>Book Seat</button>
+        </a>
+
+    </div>
+
+    <script>
+
+        let params = new URLSearchParams(window.location.search);
+
+        let movie = params.get("movie");
+
+        document.getElementById("movieName").innerHTML = movie;
+
+    </script>
+
+</body>
+</html>
