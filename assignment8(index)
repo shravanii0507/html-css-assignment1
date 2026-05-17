@@ -1,0 +1,194 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Movie Booking System</title>
+
+    <style>
+
+        body{
+            background-color:#dbeafe;
+            font-family:Arial;
+            padding:20px;
+        }
+
+        h1{
+            text-align:center;
+            color:#1e3a8a;
+        }
+
+        .movie-container{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+            margin-top:30px;
+        }
+
+        .movie-card{
+            background:white;
+            padding:10px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0px 0px 10px lightgray;
+        }
+
+        .movie-card img{
+            width:100%;
+            height:320px;
+            border-radius:10px;
+        }
+
+        .movie-card h3{
+            color:#1d4ed8;
+        }
+
+        .movie-card p{
+            color:gray;
+        }
+
+        .movie-card button{
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:10px 15px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .movie-card button:hover{
+            background:#1d4ed8;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Online Movie Booking</h1>
+
+    <div class="movie-container">
+
+        <!-- Movie 1 -->
+        <div class="movie-card">
+
+            <img src="https://imagesvs.oneindia.com/img/2026/05/rajashivaji-movie-review-jpg-1777632911360_1777632911298-1200x675.jpg">
+            <h3>Raja Shivaji</h3>
+
+            <p>Date : 20 May 2026</p>
+
+            <a href="details.html?movie=Raja Shivaji">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="movie-card">
+
+            <img src="https://www.vitalthrills.com/wp-content/uploads/2026/02/michaelmovie5.jpg">
+            <h3>Michael</h3>
+
+            <p>Date : 21 May 2026</p>
+
+            <a href="details.html?movie=Michael">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+        <!-- Movie 3 -->
+        <div class="movie-card">
+
+            <img src="https://images.filmibeat.com/ph-big/2026/04/aakhri-sawal1776923149_0.jpg">
+            <h3>Aakhri Sawal</h3>
+
+            <p>Date : 22 May 2026</p>
+
+            <a href="details.html?movie=Aakhri Sawal">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+        <!-- Movie 4 -->
+        <div class="movie-card">
+
+            <img src="https://img.airtel.tv/unsafe/fit-in/1600x0/filters:format(webp)/https://xstreamcp-assets-msp.streamready.in/assets/MINITV/MOVIE/677d9b4effdfdf4daee568c6/images/LANDSCAPE_169/be014bbe93757aa8c924c3bd96bb72462c337f11d37dbbbd9ba884638e6fefc1.jpg?o=production">
+
+            <h3>Pati Patni Aur Woh</h3>
+
+            <p>Date : 23 May 2026</p>
+
+            <a href="details.html?movie=Pati Patni Aur Woh">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+        <!-- Movie 5 -->
+        <div class="movie-card">
+
+            <img src="https://img-cdn.publive.online/fit-in/1280x720/filters:format(webp)/industry-wired/media/media_files/2026/03/09/dhurandhar-2-trailer-breakdown-2026-03-09-22-28-08.jpg">
+            <h3>Dhurandhar 2</h3>
+
+            <p>Date : 24 May 2026</p>
+
+            <a href="details.html?movie=Dhurandhar 2">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+        <!-- Movie 6 -->
+        <div class="movie-card">
+
+            <img src="https://images.news18.com/ibnlive/uploads/2026/05/The-Devil-Wears-Prada-2-2026-05-f99c6356c03e5218c880c8c0937c9e87.jpg">
+
+            <h3>The Devil Wears Prada 2</h3>
+
+            <p>Date : 25 May 2026</p>
+
+            <a href="details.html?movie=The Devil Wears Prada 2">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+        <!-- Movie 7 -->
+        <div class="movie-card">
+
+            <img src="https://tse4.mm.bing.net/th/id/OIP.Dbm-5hV35NDTOkQRxC3QDQHaJ4?pid=Api&P=0&h=1800">
+            <h3>Daadi Ki Shaadi</h3>
+
+            <p>Date : 26 May 2026</p>
+
+            <a href="details.html?movie=Mere yaar ki shaadi hai">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+        <!-- Movie 8 -->
+        <div class="movie-card">
+
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/44/The_Super_Mario_Bros._Movie_poster.jpg">
+
+            <h3>The Super Mario Galaxy Movie</h3>
+
+            <p>Date : 27 May 2026</p>
+
+            <a href="details.html?movie=The Super Mario Galaxy Movie">
+                <button>View Details</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
