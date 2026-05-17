@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Styling</title>
+
+    <style>
+
+        .text-here {
+            font-size: 55px;
+            font-family: sans-serif;
+            color: black;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            text-align: left;
+            letter-spacing: normal;
+            word-spacing: normal;
+        }
+
+        .stylebt{
+            padding:5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- html code goes here -->
+
+    <div class='text-here' id='text-container'>
+        This is some example text
+    </div>
+
+
+    <input type="text" id="colorbox">
+
+    <button id="colorchange">Change Colour</button>
+
+    <br><br>
+
+    <input type="range" id="fontsize" min="10" max="100" value="55">
+
+    <br><br>
+
+
+    <button id="italic" class="stylebt">Italics</button>
+
+    <button id="underline" class="stylebt">Underline</button>
+
+    <button id="bold" class="stylebt">Bold</button>
+
+    <br><br>
+
+
+    <select id="list">
+
+        <option value="serif">Serif</option>
+
+        <option value="sans-serif">Sans-Serif</option>
+
+        <option value="monospace">Monospace</option>
+
+        <option value="cursive">Cursive</option>
+
+        <option value="fantasy">Fantasy</option>
+
+    </select>
+
+
+    <br><br>
+
+    <button id="getstyle">Get CSS</button>
+
+    <br><br>
+
+    <p id="css-props"></p>
+
+
+
+    <script>
+
+        let text = document.getElementById("text-container");
+
+
+
+        document.getElementById("colorchange").onclick = function () {
+
+            let colour = document.getElementById("colorbox").value;
+
+            text.style.color = colour;
+        }
+
+
+
+        document.getElementById("fontsize").oninput = function () {
+
+            text.style.fontSize = this.value + "px";
+        }
+
+
+
+        document.getElementById("bold").onclick = function () {
+
+            if (text.style.fontWeight == "bold") {
+
+                text.style.fontWeight = "normal";
+            }
+
+            else {
+
+                text.style.fontWeight = "bold";
+            }
+        }
+
+
+
+        document.getElementById("italic").onclick = function () {
+
+            if (text.style.fontStyle == "italic") {
+
+                text.style.fontStyle = "normal";
+            }
+
+            else {
+
+                text.style.fontStyle = "italic";
+            }
+        }
+
+
+
+        document.getElementById("underline").onclick = function () {
+
+            if (text.style.textDecoration == "underline") {
+
+                text.style.textDecoration = "none";
+            }
+
+            else {
+
+                text.style.textDecoration = "underline";
+            }
+        }
+
+
+
+        document.getElementById("list").onchange = function () {
+
+            text.style.fontFamily = this.value;
+        }
+
+
+
+        document.getElementById("getstyle").onclick = function () {
+
+            let data =
+                "color: " + text.style.color + "; " +
+                "font-size: " + text.style.fontSize + "; " +
+                "font-family: " + text.style.fontFamily + "; " +
+                "text-decoration: " + text.style.textDecoration + "; " +
+                "font-style: " + text.style.fontStyle + "; " +
+                "font-weight: " + text.style.fontWeight + ";";
+
+            document.getElementById("css-props").innerText = data;
+        }
+
+    </script>
+
+</body>
+
+</html>
+
